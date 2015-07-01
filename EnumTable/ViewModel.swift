@@ -11,6 +11,8 @@ import UIKit
 
 enum Row {
     case Twitter, Facebook, Instagram, Contact, Settings
+    case FirstName(String)
+    case LastName(String)
     
     
     var displayName:String {
@@ -25,24 +27,32 @@ enum Row {
             return NSLocalizedString("Contact us", comment:"")
         case .Settings:
             return NSLocalizedString("Advanced Settings", comment:"")
+        case let .FirstName(name):
+            return name
+        case let .LastName(name):
+            return name
         }
     }
     
     var icon:UIImage? {
-        let imageName:String
+        let assetId:UIImage.AssetIdentifier
         switch self {
         case .Twitter:
-            imageName = "twitter"
+            assetId = .Twitter
         case .Facebook:
-            imageName = "facebook"
+            assetId = .Facebook
         case .Instagram:
-            imageName = "instagram"
+            assetId = .Instagram
         case .Contact:
-            imageName = "phone"
+            assetId = .Phone
         case .Settings:
-            imageName = "gear"
+            assetId = .Gear
+        case .FirstName:
+            assetId = .User
+        case .LastName:
+            assetId = .User
         }
-        return UIImage(named: imageName)
+        return UIImage(assetIdentifier: assetId)
     }
     
     var URL:String? {
@@ -65,6 +75,7 @@ class TableViewModel {
     
     let schema:[(sectionTitle:String, rows:[Row])] = [
         (NSLocalizedString("Social", comment:""), [.Facebook, .Instagram, .Twitter]),
-        (NSLocalizedString("Other", comment:""), [.Contact, .Settings])]
+        (NSLocalizedString("Other", comment:""), [.Contact, .Settings]),
+        (NSLocalizedString("About You", comment:""), [.FirstName("John"), .LastName("Appleseed")])]
     
 }

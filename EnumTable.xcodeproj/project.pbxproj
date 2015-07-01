@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CCD853A51B3293FC00FCA5D2 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD853A41B3293FC00FCA5D2 /* UIImage.swift */; };
 		CCFF60881B223C560084BC00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFF60871B223C560084BC00 /* AppDelegate.swift */; };
 		CCFF608A1B223C560084BC00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFF60891B223C560084BC00 /* ViewController.swift */; };
 		CCFF608D1B223C560084BC00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCFF608B1B223C560084BC00 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CCD853A41B3293FC00FCA5D2 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		CCFF60821B223C560084BC00 /* EnumTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnumTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCFF60861B223C560084BC00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCFF60871B223C560084BC00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				CCFF60901B223C560084BC00 /* LaunchScreen.xib */,
 				CCFF60851B223C560084BC00 /* Supporting Files */,
 				CCFF60A71B223E750084BC00 /* ViewModel.swift */,
+				CCD853A41B3293FC00FCA5D2 /* UIImage.swift */,
 			);
 			path = EnumTable;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 		CCFF607A1B223C560084BC00 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = whiteley.org;
 				TargetAttributes = {
@@ -216,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCFF608A1B223C560084BC00 /* ViewController.swift in Sources */,
+				CCD853A51B3293FC00FCA5D2 /* UIImage.swift in Sources */,
 				CCFF60A81B223E750084BC00 /* ViewModel.swift in Sources */,
 				CCFF60881B223C560084BC00 /* AppDelegate.swift in Sources */,
 			);
@@ -415,6 +420,7 @@
 				CCFF60A31B223C560084BC00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CCFF60A41B223C560084BC00 /* Build configuration list for PBXNativeTarget "EnumTableTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +429,7 @@
 				CCFF60A61B223C560084BC00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

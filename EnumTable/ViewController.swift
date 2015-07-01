@@ -10,7 +10,12 @@ import UIKit
 
 extension Row {
     var reuseIdentifier:String {
-        return "cell"
+        switch self {
+        case .Contact, .Settings:
+            return "redCell"
+        default:
+            return "blueCell"
+        }
     }
 }
 
@@ -38,7 +43,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let row = self.viewModel.schema[indexPath.section].rows[indexPath.row]
-        let cell = tableView.dequeueReusableCellWithIdentifier(row.reuseIdentifier, forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(row.reuseIdentifier, forIndexPath: indexPath) as UITableViewCell
         cell.imageView?.image = row.icon
         cell.textLabel?.text = row.displayName
         cell.accessoryType = row.URL == nil ? .None : .DisclosureIndicator
@@ -59,6 +64,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
         }
     }
+
 
 }
 
