@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Cell Reuse Identifier
 extension Row {
     var reuseIdentifier:String {
         switch self {
