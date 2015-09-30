@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  EnumTable
-//
-//  Created by Bart Whiteley on 6/5/15.
-//  Copyright (c) 2015 whiteley.org. All rights reserved.
-//
 
 import UIKit
 

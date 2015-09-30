@@ -1,10 +1,4 @@
-//
-//  ViewModel.swift
-//  EnumTable
-//
-//  Created by Bart Whiteley on 6/5/15.
-//  Copyright (c) 2015 whiteley.org. All rights reserved.
-//
+
 
 import UIKit
 
@@ -73,6 +67,7 @@ enum Row {
 
 class TableViewModel {
     
+    // These are the sections. An array of tuples with the section titles and section rows.
     let schema:[(sectionTitle:String, rows:[Row])] = [
         (NSLocalizedString("Social", comment:""), [.Facebook, .Instagram, .Twitter]),
         (NSLocalizedString("Other", comment:""), [.Contact, .Settings]),
